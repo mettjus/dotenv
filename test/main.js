@@ -151,6 +151,11 @@ describe('dotenv', function () {
       done()
     })
 
+    it('allow comments at end of lines', function (done) {
+      parsed.END_OF_LINE_COMMENT.should.eql('some value')
+      done()
+    })
+
     it('respects equals signs in values', function (done) {
       parsed.EQUAL_SIGNS.should.eql('equals==')
       done()
